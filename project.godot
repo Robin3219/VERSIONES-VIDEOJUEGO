@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VIDEOJUEGO ana  ARCHIVO NUEVO "
-run/main_scene="uid://d4nwher7cx3a4"
+run/main_scene="uid://cj5wj8wpssuyg"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
