@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6n1s74adclub"]
+
+[ext_resource type="Texture2D" uid="uid://hj10e222edwe" path="res://Mapa nivel 1/decoraciones/Contenedor toxico 1.png" id="1_to65x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdbpr"]
+size = Vector2(327.1175, 432.86624)
+
+[node name="ContenedorToxico1" type="Sprite2D"]
+position = Vector2(138.99994, 139)
+scale = Vector2(0.36478075, 0.2702407)
+texture = ExtResource("1_to65x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-2.741211, -3.7004242)
+shape = SubResource("RectangleShape2D_gdbpr")

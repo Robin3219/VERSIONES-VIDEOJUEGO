@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://dleel10r20h4m"]
+
+[ext_resource type="PackedScene" uid="uid://bdov1ej3ty3o4" path="res://Personaje/Fisicaplayer. .tscn" id="1_l0ole"]
+[ext_resource type="PackedScene" uid="uid://f1pfibjnevsi" path="res://pisso.tscn" id="2_etoav"]
+[ext_resource type="PackedScene" uid="uid://dnblrfiijj4hi" path="res://objecto con fisicas.tscn" id="3_7arw3"]
+[ext_resource type="PackedScene" uid="uid://ckax6hyq87cnc" path="res://objecto_circulo.tscn 1.tscn" id="5_4f7ll"]
+[ext_resource type="PackedScene" uid="uid://dwexi7s865k52" path="res://ENEMIGO.tscn" id="6_l0ole"]
+[ext_resource type="PackedScene" uid="uid://bpsje3lx6ftsi" path="res://Area 2D, lugar de muerte.tscn" id="6_sem75"]
+[ext_resource type="PackedScene" uid="uid://mrreh5q7fugx" path="res://Personaje/Enemigo configurado.tscn" id="7_etoav"]
+[ext_resource type="PackedScene" uid="uid://cs3iong5k0w0l" path="res://Objectos/ITEM FLOR VERDE.tscn" id="8_7arw3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_l0ole")]
+position = Vector2(49, 608)
+
+[node name="piso" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(126, 666)
+
+[node name="piso2" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(252, 666)
+
+[node name="piso3" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(377, 666)
+
+[node name="piso4" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(503, 666)
+
+[node name="piso5" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(865, 666)
+
+[node name="piso6" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(739, 666)
+
+[node name="piso7" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(991, 666)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_7arw3")]
+position = Vector2(403, 227)
+
+[node name="objecto circulo" parent="." instance=ExtResource("5_4f7ll")]
+position = Vector2(319, 555)
+
+[node name="Node2D6" parent="." instance=ExtResource("3_7arw3")]
+position = Vector2(781, 218)
+
+[node name="piso9" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(374, 599)
+
+[node name="piso8" parent="." instance=ExtResource("2_etoav")]
+position = Vector2(1117, 666)
+
+[node name="death zone" parent="." instance=ExtResource("6_sem75")]
+position = Vector2(4, 4)
+
+[node name="RespawnPoint" type="Marker2D" parent="."]
+position = Vector2(42, 612)
+
+[node name="Node2D" parent="." instance=ExtResource("6_l0ole")]
+position = Vector2(861, 570)
+
+[node name="Node2D3" parent="." instance=ExtResource("7_etoav")]
+position = Vector2(863, 605)
+
+[node name="Node2D4" parent="." instance=ExtResource("8_7arw3")]
+position = Vector2(186, 610)

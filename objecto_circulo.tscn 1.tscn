@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckax6hyq87cnc"]
+
+[ext_resource type="Texture2D" uid="uid://3d7w6wmi7a5p" path="res://yellow_body_circle.png" id="1_nf6vm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iuwp0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_38g46"]
+radius = 20.22375
+
+[node name="objecto circulo" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 54.614
+physics_material_override = SubResource("PhysicsMaterial_iuwp0")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nf6vm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_38g46")

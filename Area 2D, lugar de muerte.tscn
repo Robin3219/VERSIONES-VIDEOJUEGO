@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpsje3lx6ftsi"]
+
+[sub_resource type="GDScript" id="GDScript_ivp13"]
+script/source = "extends Area2D
+
+func _on_death_zone_body_entered(body: Node) -> void:
+	print(\"Entró algo:\", body.name)
+
+func _ready():
+	print(\"DeathZone listo, esperando colisiones...\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivp13"]
+size = Vector2(1159, 95)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(519, 628)
+collision_layer = 2
+script = SubResource("GDScript_ivp13")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(56, 63)
+shape = SubResource("RectangleShape2D_ivp13")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

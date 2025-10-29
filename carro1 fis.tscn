@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://wgxp6rlo8nh5"]
+
+[ext_resource type="Texture2D" uid="uid://8rrlkiyuxl4s" path="res://Mapa nivel 1/decoraciones/caro2.png" id="1_kjqep"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1v4y"]
+size = Vector2(1748.6956, 523.86597)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei2dy"]
+size = Vector2(1357.9326, 345.6236)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(210.0541, 490.50763)
+scale = Vector2(0.17078362, 0.19032899)
+texture = ExtResource("1_kjqep")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(66.595825, 107.75293)
+scale = Vector2(0.9999999, 1.0000004)
+shape = SubResource("RectangleShape2D_a1v4y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(170.26233, -308.84668)
+scale = Vector2(0.9999999, 1.0000001)
+shape = SubResource("RectangleShape2D_ei2dy")

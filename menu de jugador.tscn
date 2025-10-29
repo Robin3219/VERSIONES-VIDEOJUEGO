@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj5wj8wpssuyg"]
+
+[ext_resource type="Script" uid="uid://c4w64wuchqd3c" path="res://escena de menu.gd" id="1_p8of8"]
+[ext_resource type="Texture2D" uid="uid://bapqmds7wt6qx" path="res://Pantalla de inicio.png" id="2_qfb2b"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-16, 64)
+script = ExtResource("1_p8of8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(593.25, 258.5)
+scale = Vector2(1.4400749, 1.4314159)
+texture = ExtResource("2_qfb2b")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 513.0
+offset_top = 224.0
+offset_right = 698.0
+offset_bottom = 271.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

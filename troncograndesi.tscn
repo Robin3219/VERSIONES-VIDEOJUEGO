@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://mw1xwqbl36sy"]
+
+[ext_resource type="Texture2D" uid="uid://chanoy2rnr1ub" path="res://NATURALEZA/BOSQUE_0000s_0009_TOCÓN-LISO.png" id="1_1wje2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mk5u8"]
+size = Vector2(113.41141, 11.159149)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(403.11066, 460.158)
+scale = Vector2(0.37664214, 0.31941953)
+texture = ExtResource("1_1wje2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+position = Vector2(-1499.2384, -648.8245)
+scale = Vector2(2.5207875, 2.491885)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(592.527, 125.43794)
+scale = Vector2(1, 1.0000002)
+shape = SubResource("RectangleShape2D_mk5u8")

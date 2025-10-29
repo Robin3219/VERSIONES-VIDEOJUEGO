@@ -1,0 +1,331 @@
+[gd_scene load_steps=22 format=3 uid="uid://4gq78l32pmid"]
+
+[ext_resource type="PackedScene" path="res://todo junto.tscn" id="1_1jhv7"]
+[ext_resource type="Texture2D" uid="uid://2fmayhxmuun4" path="res://Mapa nivel 1/Casas/Casa azul.png" id="2_1boc4"]
+[ext_resource type="Texture2D" uid="uid://bn62spfc4giyq" path="res://Mapa nivel 1/fondo/Cerca.png" id="2_qlfj7"]
+[ext_resource type="Texture2D" uid="uid://buestdd3eiwn5" path="res://Mapa nivel 1/Naturaleza/arbol.png" id="3_0dssg"]
+[ext_resource type="Texture2D" uid="uid://8rrlkiyuxl4s" path="res://Mapa nivel 1/decoraciones/caro2.png" id="3_suadl"]
+[ext_resource type="Texture2D" uid="uid://d2ibmolc7b80a" path="res://Mapa nivel 1/Naturaleza/Arbusto 1.png" id="6_t0hmt"]
+[ext_resource type="Texture2D" uid="uid://ii78cgkvo88g" path="res://Mapa nivel 1/Naturaleza/Arbusto 2.png" id="7_4royb"]
+[ext_resource type="Texture2D" uid="uid://c1pumnf8m0osp" path="res://Mapa nivel 1/fondo/Pasto.png" id="8_s1sph"]
+[ext_resource type="Texture2D" uid="uid://l168ooxgdnk5" path="res://Mapa nivel 1/Naturaleza/Roca 1.png" id="9_bs2ch"]
+[ext_resource type="Texture2D" uid="uid://chyw5m4bw1vxu" path="res://Mapa nivel 1/Naturaleza/pino joven.png" id="10_ctile"]
+[ext_resource type="Texture2D" uid="uid://3oaap6le2jmt" path="res://Mapa nivel 1/Naturaleza/Pino.png" id="11_ebswj"]
+[ext_resource type="Texture2D" uid="uid://crofvnhhwcier" path="res://Mapa nivel 1/Naturaleza/Pino grande.png" id="12_10ckf"]
+[ext_resource type="Texture2D" uid="uid://ufuxo8lcxtl7" path="res://Mapa nivel 1/Naturaleza/arbusto redondo.png" id="13_nrnin"]
+[ext_resource type="Texture2D" uid="uid://bxn1vbn06tb81" path="res://Mapa nivel 1/Naturaleza/arbol frongoso.png" id="14_7whum"]
+[ext_resource type="Texture2D" uid="uid://cb1278eb2ycbi" path="res://Mapa nivel 1/Casas/Tienda.png" id="15_0dssg"]
+[ext_resource type="Texture2D" uid="uid://bvaebansr3mw" path="res://Mapa nivel 1/Naturaleza/Roca 2.png" id="15_bpdi6"]
+[ext_resource type="Texture2D" uid="uid://bslpsbt1yp7oa" path="res://Mapa nivel 1/Naturaleza/Tocon liso.png" id="16_3yhmj"]
+[ext_resource type="Texture2D" uid="uid://gvctu2sriq2x" path="res://Mapa nivel 1/Casas/Casa morada.png" id="16_t0hmt"]
+[ext_resource type="Texture2D" uid="uid://dtb8glgjigotj" path="res://Mapa nivel 1/Naturaleza/Pasto tira.png" id="17_qkidw"]
+
+[sub_resource type="GDScript" id="GDScript_1boc4"]
+resource_name = "Union nivel 1-nivel 2-menu.nivel1"
+script/source = "extends Node2D
+
+var menu_scene = load (\"res://Menu de jugador.tscn\")
+var level2_scene = load(\"res://Nivel 2.tscn\")
+
+func _on_avanzar_pressed() -> void:
+	get_tree().change_scene_to_packed(level2_scene)
+	pass 
+
+func _on_retroceder_pressed() -> void:
+	get_tree().change_scene_to_packed(menu_scene)
+	pass 
+"
+
+[sub_resource type="GDScript" id="GDScript_suadl"]
+resource_name = "tutorial 1"
+script/source = "extends CanvasLayer
+
+@onready var dialog_text: Label = $Panel/DialogText
+
+var current_step: int = 0
+
+func _ready() -> void:
+	dialog_text.text = \"Pulsa D para moverte a la derecha.\"
+
+func _process(_delta: float) -> void:
+	match current_step:
+		0:
+			if Input.is_action_just_pressed(\"ui_right\"):
+				dialog_text.text = \"Pulsa A para moverte a la izquierda.\"
+				current_step = 1
+
+		1:
+			if Input.is_action_just_pressed(\"ui_left\"):
+				dialog_text.text = \"Perfecto. Ya sabes moverte.\"
+				current_step = 2
+				hide_tutorial()
+
+func hide_tutorial() -> void:
+	await get_tree().create_timer(2.0).timeout
+	$Panel.visible = false
+"
+
+[node name="Node2D" instance=ExtResource("1_1jhv7")]
+script = SubResource("GDScript_1boc4")
+
+[node name="Cielo" parent="." index="0"]
+position = Vector2(2817, 186.99998)
+
+[node name="Edificio3" parent="." index="1"]
+position = Vector2(492, 119)
+
+[node name="Edificio8" parent="." index="6"]
+position = Vector2(6330, 160.00002)
+
+[node name="Cerca" parent="." index="8"]
+position = Vector2(-570.00006, 355)
+scale = Vector2(0.30273435, 0.41971537)
+
+[node name="Cerca2" type="Sprite2D" parent="." index="9"]
+position = Vector2(572.00006, 345)
+scale = Vector2(0.30273435, 0.41971537)
+texture = ExtResource("2_qlfj7")
+
+[node name="Cerca3" type="Sprite2D" parent="." index="10"]
+position = Vector2(1653.0001, 337.99997)
+scale = Vector2(0.30273435, 0.41971537)
+texture = ExtResource("2_qlfj7")
+
+[node name="Cerca4" type="Sprite2D" parent="." index="11"]
+position = Vector2(2794, 328.99997)
+scale = Vector2(0.30273435, 0.41971537)
+texture = ExtResource("2_qlfj7")
+
+[node name="Cerca5" type="Sprite2D" parent="." index="12"]
+position = Vector2(3935, 321)
+scale = Vector2(0.30273435, 0.41971537)
+texture = ExtResource("2_qlfj7")
+
+[node name="Cerca6" type="Sprite2D" parent="." index="13"]
+position = Vector2(5078.0005, 317)
+scale = Vector2(0.30273435, 0.41971537)
+texture = ExtResource("2_qlfj7")
+
+[node name="Cerca7" type="Sprite2D" parent="." index="14"]
+position = Vector2(6221.0005, 306.99997)
+scale = Vector2(0.30273435, 0.41971537)
+texture = ExtResource("2_qlfj7")
+
+[node name="Calle" parent="." index="15"]
+position = Vector2(2376, 589)
+
+[node name="CollisionShape2D" parent="Calle/StaticBody2D" index="0"]
+position = Vector2(161.06674, 366.4807)
+
+[node name="Pasto" parent="." index="16"]
+position = Vector2(2907, 501.00006)
+rotation = -0.0073663522
+
+[node name="Arbol" type="Sprite2D" parent="." index="27"]
+position = Vector2(4545.0005, 258)
+scale = Vector2(0.44515538, 0.41907942)
+texture = ExtResource("3_0dssg")
+
+[node name="CasaAzul2" type="Sprite2D" parent="." index="28"]
+position = Vector2(4707, 340.00003)
+scale = Vector2(0.29808307, 0.28030303)
+texture = ExtResource("2_1boc4")
+
+[node name="Caro2" type="Sprite2D" parent="." index="29"]
+position = Vector2(4346, 561)
+rotation = 3.1415927
+scale = Vector2(0.1544463, -0.16893193)
+texture = ExtResource("3_suadl")
+
+[node name="Arbusto5" type="Sprite2D" parent="." index="30"]
+position = Vector2(5545.0005, 477)
+scale = Vector2(0.52772963, 0.5147783)
+texture = ExtResource("6_t0hmt")
+
+[node name="Arbusto6" type="Sprite2D" parent="." index="31"]
+position = Vector2(5725.0005, 481)
+scale = Vector2(0.61086476, 0.50490195)
+texture = ExtResource("7_4royb")
+
+[node name="Pasto2" type="Sprite2D" parent="." index="32"]
+position = Vector2(6903, 765)
+scale = Vector2(0.3505208, 2.0514085)
+texture = ExtResource("8_s1sph")
+
+[node name="Roca4" type="Sprite2D" parent="." index="33"]
+position = Vector2(6161, 545)
+scale = Vector2(0.27278703, 0.25187963)
+texture = ExtResource("9_bs2ch")
+
+[node name="Arbusto7" type="Sprite2D" parent="." index="34"]
+position = Vector2(6259.4375, 535.4375)
+scale = Vector2(0.47682095, 0.47721675)
+texture = ExtResource("6_t0hmt")
+
+[node name="Arbusto10" type="Sprite2D" parent="." index="35"]
+position = Vector2(6835.0005, 770.99994)
+scale = Vector2(0.5347716, 0.54895294)
+texture = ExtResource("6_t0hmt")
+
+[node name="Arbusto12" type="Sprite2D" parent="." index="36"]
+position = Vector2(7418.0005, 665)
+scale = Vector2(0.5347716, 0.54895294)
+texture = ExtResource("6_t0hmt")
+
+[node name="PinoJoven" type="Sprite2D" parent="." index="37"]
+position = Vector2(6621.75, 333.75)
+scale = Vector2(0.47664332, 0.3409091)
+texture = ExtResource("10_ctile")
+
+[node name="PinoJoven2" type="Sprite2D" parent="." index="38"]
+position = Vector2(6822, 300)
+scale = Vector2(0.47664332, 0.3409091)
+texture = ExtResource("10_ctile")
+
+[node name="Pino4" type="Sprite2D" parent="." index="39"]
+position = Vector2(6726, 360)
+scale = Vector2(0.47162214, 0.35867247)
+texture = ExtResource("11_ebswj")
+
+[node name="Pino3" type="Sprite2D" parent="." index="40"]
+position = Vector2(6531, 350)
+scale = Vector2(0.42072073, 0.41006425)
+texture = ExtResource("11_ebswj")
+
+[node name="PinoGrande" type="Sprite2D" parent="." index="41"]
+position = Vector2(6958, 312)
+scale = Vector2(0.33529422, 0.3060138)
+texture = ExtResource("12_10ckf")
+
+[node name="ArbustoRedondo" type="Sprite2D" parent="." index="42"]
+position = Vector2(6321, 354.0001)
+scale = Vector2(0.2769231, 0.24090908)
+texture = ExtResource("13_nrnin")
+
+[node name="ArbolFrongoso" type="Sprite2D" parent="." index="43"]
+position = Vector2(7252, 317)
+scale = Vector2(0.28140506, 0.28832218)
+texture = ExtResource("14_7whum")
+
+[node name="Tienda2" type="Sprite2D" parent="." index="44"]
+position = Vector2(3190.0625, 460.87503)
+scale = Vector2(0.1546792, 0.14704694)
+texture = ExtResource("15_0dssg")
+
+[node name="CasaMorada2" type="Sprite2D" parent="." index="45"]
+position = Vector2(1880.9999, 366)
+scale = Vector2(0.22398743, 0.24727751)
+texture = ExtResource("16_t0hmt")
+
+[node name="Arbusto14" type="Sprite2D" parent="." index="46"]
+position = Vector2(2584, 494)
+scale = Vector2(0.3771662, 0.46120688)
+texture = ExtResource("6_t0hmt")
+
+[node name="Arbusto13" type="Sprite2D" parent="." index="47"]
+position = Vector2(2690, 498.99997)
+scale = Vector2(0.57289344, 0.5183823)
+texture = ExtResource("7_4royb")
+
+[node name="CharacterBody2D" parent="." index="48"]
+position = Vector2(621, 349)
+
+[node name="CasaMorada" parent="." index="54"]
+position = Vector2(1835.9999, 1025)
+
+[node name="Tienda" parent="." index="56"]
+position = Vector2(3339, 1158)
+scale = Vector2(0.1546792, 0.14704694)
+
+[node name="Anuncio" parent="." index="57"]
+position = Vector2(3042, 533)
+scale = Vector2(0.2015926, 0.16578516)
+
+[node name="Arbusto4" parent="." index="58"]
+position = Vector2(2365, 1018)
+
+[node name="BolsaDeBasura3" parent="." index="60"]
+position = Vector2(3345.9998, 537)
+scale = Vector2(0.16333452, 0.13424824)
+
+[node name="BolsaDeBasura4" parent="." index="61"]
+position = Vector2(3315, 550.00006)
+scale = Vector2(0.14854605, 0.122260354)
+
+[node name="Arbusto3" parent="." index="62"]
+position = Vector2(2508, 994)
+
+[node name="Roca2" parent="." index="63"]
+position = Vector2(1484.0001, 473.99997)
+
+[node name="Roca3" parent="." index="64"]
+position = Vector2(1526, 488)
+
+[node name="Avanzar" type="Button" parent="." index="67"]
+offset_left = 6693.0
+offset_top = 568.0
+offset_right = 6826.0
+offset_bottom = 610.0
+text = "NIVEL 2"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="68"]
+
+[node name="Retroceder" type="Button" parent="CanvasLayer" index="0"]
+offset_left = 104.0
+offset_top = 18.0
+offset_right = 171.0
+offset_bottom = 54.0
+text = "MENU"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." index="69"]
+script = SubResource("GDScript_suadl")
+
+[node name="Panel" type="Panel" parent="CanvasLayer2" index="0"]
+offset_left = 544.0
+offset_top = 166.0
+offset_right = 696.0
+offset_bottom = 206.0
+
+[node name="DialogText" type="Label" parent="CanvasLayer2/Panel" index="0"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 155.0
+offset_bottom = 38.0
+
+[node name="Roca5" type="Sprite2D" parent="." index="70"]
+position = Vector2(6189.0005, 689)
+scale = Vector2(0.34319472, 0.33114034)
+texture = ExtResource("15_bpdi6")
+
+[node name="Arbusto8" type="Sprite2D" parent="." index="71"]
+position = Vector2(6273.9995, 670)
+scale = Vector2(0.7233919, 0.6348041)
+texture = ExtResource("7_4royb")
+
+[node name="Arbusto9" type="Sprite2D" parent="." index="72"]
+position = Vector2(6562.999, 728)
+scale = Vector2(0.7233919, 0.6348041)
+texture = ExtResource("7_4royb")
+
+[node name="ToconLiso" type="Sprite2D" parent="." index="73"]
+position = Vector2(7327, 705.9999)
+scale = Vector2(0.27103743, 0.27298847)
+texture = ExtResource("16_3yhmj")
+
+[node name="Arbusto11" type="Sprite2D" parent="." index="74"]
+position = Vector2(7171.4375, 745.625)
+scale = Vector2(0.9293256, 0.7389707)
+texture = ExtResource("7_4royb")
+
+[node name="PastoTira" type="Sprite2D" parent="." index="75"]
+position = Vector2(6271.25, 689.625)
+scale = Vector2(0.54134506, 0.45261425)
+texture = ExtResource("17_qkidw")
+
+[node name="PastoTira2" type="Sprite2D" parent="." index="76"]
+position = Vector2(6548, 750)
+scale = Vector2(0.5307692, 0.44117647)
+texture = ExtResource("17_qkidw")
+
+[connection signal="pressed" from="Avanzar" to="." method="_on_avanzar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Retroceder" to="." method="_on_retroceder_pressed"]

@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnwuk4lcbbqrv"]
+
+[ext_resource type="PackedScene" uid="uid://f1pfibjnevsi" path="res://pisso.tscn" id="1_yp64u"]
+[ext_resource type="PackedScene" uid="uid://b5fl7iloh638s" path="res://personajea.tscn" id="2_oy3t6"]
+[ext_resource type="PackedScene" uid="uid://ckax6hyq87cnc" path="res://objecto_circulo.tscn 1.tscn" id="3_al48a"]
+[ext_resource type="PackedScene" uid="uid://dnblrfiijj4hi" path="res://objecto con fisicas.tscn" id="4_al48a"]
+[ext_resource type="PackedScene" uid="uid://c8er5ipocotxg" path="res://piso volteadi.tscn" id="5_h71b3"]
+
+[node name="PRUEBA 1" type="Node2D"]
+
+[node name="piso" parent="." instance=ExtResource("1_yp64u")]
+position = Vector2(276, 575)
+
+[node name="piso2" parent="." instance=ExtResource("1_yp64u")]
+position = Vector2(403, 576)
+
+[node name="piso3" parent="." instance=ExtResource("1_yp64u")]
+position = Vector2(528, 576)
+
+[node name="piso4" parent="." instance=ExtResource("1_yp64u")]
+position = Vector2(649, 574)
+
+[node name="personaje" parent="." instance=ExtResource("2_oy3t6")]
+position = Vector2(256, 457)
+
+[node name="objecto circulo" parent="." instance=ExtResource("3_al48a")]
+position = Vector2(411, 385)
+
+[node name="personaje2" parent="." instance=ExtResource("2_oy3t6")]
+position = Vector2(595, 461)
+
+[node name="piso5" parent="." instance=ExtResource("1_yp64u")]
+position = Vector2(741, 355)
+
+[node name="piso6" parent="." instance=ExtResource("1_yp64u")]
+position = Vector2(862, 355)
+
+[node name="piso7" parent="." instance=ExtResource("1_yp64u")]
+position = Vector2(987, 354)
+
+[node name="objecto circulo2" parent="." instance=ExtResource("3_al48a")]
+position = Vector2(723, 293)
+
+[node name="Node2D" parent="." instance=ExtResource("4_al48a")]
+position = Vector2(685, 157)
+
+[node name="Node2D2" parent="." instance=ExtResource("5_h71b3")]
+position = Vector2(563, 248)
+
+[node name="Node2D3" parent="." instance=ExtResource("5_h71b3")]
+position = Vector2(637, 218)
+
+[node name="Node2D4" parent="." instance=ExtResource("5_h71b3")]
+position = Vector2(707, 190)
+
+[node name="Node2D5" parent="." instance=ExtResource("5_h71b3")]
+position = Vector2(781, 161)

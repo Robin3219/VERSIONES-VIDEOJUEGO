@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgk57it17s1xw"]
+
+[ext_resource type="PackedScene" uid="uid://f1pfibjnevsi" path="res://pisso.tscn" id="2_krkn6"]
+[ext_resource type="PackedScene" uid="uid://dnblrfiijj4hi" path="res://objecto con fisicas.tscn" id="3_iv08l"]
+[ext_resource type="PackedScene" uid="uid://c8er5ipocotxg" path="res://piso volteadi.tscn" id="4_pv6pm"]
+[ext_resource type="PackedScene" uid="uid://ckax6hyq87cnc" path="res://objecto_circulo.tscn 1.tscn" id="5_uvv6p"]
+[ext_resource type="PackedScene" uid="uid://bdov1ej3ty3o4" path="res://Personaje/Fisicaplayer. .tscn" id="7_uvv6p"]
+[ext_resource type="PackedScene" uid="uid://bpsje3lx6ftsi" path="res://Area 2D, lugar de muerte.tscn" id="8_pv6pm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("7_uvv6p")]
+position = Vector2(136, 578)
+
+[node name="piso" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(126, 666)
+
+[node name="piso2" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(252, 666)
+
+[node name="piso3" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(377, 666)
+
+[node name="piso4" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(503, 666)
+
+[node name="piso5" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(865, 666)
+
+[node name="piso6" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(739, 666)
+
+[node name="piso7" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(991, 666)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_iv08l")]
+position = Vector2(256, 420)
+
+[node name="Node2D3" parent="." instance=ExtResource("4_pv6pm")]
+position = Vector2(718, 461)
+rotation = 0.37879112
+
+[node name="Node2D3" parent="Node2D3" instance=ExtResource("4_pv6pm")]
+position = Vector2(-231.00693, 109.16418)
+rotation = -0.023126006
+
+[node name="Node2D3" parent="Node2D3/Node2D3" instance=ExtResource("4_pv6pm")]
+position = Vector2(-204.33322, -44.642258)
+rotation = -0.023126006
+
+[node name="Node2D3" parent="Node2D3/Node2D3/Node2D3" instance=ExtResource("4_pv6pm")]
+position = Vector2(-73.65865, 31.78682)
+rotation = -0.023126006
+
+[node name="Node2D4" parent="Node2D3/Node2D3/Node2D3" instance=ExtResource("4_pv6pm")]
+position = Vector2(73.65866, -31.786827)
+rotation = -0.023126006
+
+[node name="Node2D3" parent="Node2D3/Node2D3/Node2D3/Node2D4" instance=ExtResource("4_pv6pm")]
+position = Vector2(180.6643, -160.64064)
+rotation = -0.023126006
+
+[node name="Node2D3" parent="Node2D3/Node2D3/Node2D3/Node2D4/Node2D3" instance=ExtResource("4_pv6pm")]
+position = Vector2(78.886734, -29.476753)
+rotation = -0.023126006
+
+[node name="Node2D4" parent="." instance=ExtResource("4_pv6pm")]
+position = Vector2(798.00006, 463)
+rotation = 0.4427905
+
+[node name="Node2D5" parent="." instance=ExtResource("4_pv6pm")]
+position = Vector2(880.00006, 460.00003)
+rotation = 0.32112795
+
+[node name="objecto circulo" parent="." instance=ExtResource("5_uvv6p")]
+position = Vector2(319, 555)
+
+[node name="Node2D6" parent="." instance=ExtResource("3_iv08l")]
+position = Vector2(891, 265)
+
+[node name="piso9" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(374, 599)
+
+[node name="piso8" parent="." instance=ExtResource("2_krkn6")]
+position = Vector2(1117, 666)
+
+[node name="death zone" parent="." instance=ExtResource("8_pv6pm")]
+position = Vector2(4, 4)
+
+[node name="RespawnPoint" type="Marker2D" parent="."]
+position = Vector2(42, 612)
+
+[node name="Node2D9" parent="." instance=ExtResource("4_pv6pm")]
+position = Vector2(638, 461)
+rotation = 0.3898068
+
+[node name="Node2D7" parent="." instance=ExtResource("4_pv6pm")]
+position = Vector2(753, 235)
+rotation = -0.023126006
+
+[node name="Node2D3" parent="Node2D7" instance=ExtResource("4_pv6pm")]
+position = Vector2(77.765625, -32.210365)
+rotation = -0.023126006

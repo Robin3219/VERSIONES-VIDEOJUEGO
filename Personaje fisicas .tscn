@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc75qm52vd3d5"]
+
+[ext_resource type="PackedScene" uid="uid://f1pfibjnevsi" path="res://pisso.tscn" id="1_li04a"]
+[ext_resource type="PackedScene" uid="uid://bdov1ej3ty3o4" path="res://Personaje/Fisicaplayer. .tscn" id="2_b7ymu"]
+[ext_resource type="PackedScene" uid="uid://mrreh5q7fugx" path="res://Personaje/Enemigo configurado.tscn" id="3_b7ymu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="piso" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(124, 596)
+
+[node name="piso2" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(248, 596)
+
+[node name="piso3" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(373, 596)
+
+[node name="piso4" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(499, 596)
+
+[node name="piso5" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(625, 596)
+
+[node name="piso6" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(751, 596)
+
+[node name="piso7" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(877, 596)
+
+[node name="piso8" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(1003, 596)
+
+[node name="piso9" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(1129, 596)
+
+[node name="piso10" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(363, 422)
+
+[node name="piso10" parent="piso10" instance=ExtResource("1_li04a")]
+position = Vector2(-176, -332)
+
+[node name="piso11" parent="piso10" instance=ExtResource("1_li04a")]
+position = Vector2(-51, -332)
+
+[node name="piso12" parent="piso10" instance=ExtResource("1_li04a")]
+position = Vector2(74, -332)
+
+[node name="piso13" parent="piso10" instance=ExtResource("1_li04a")]
+position = Vector2(200, -332)
+
+[node name="piso14" parent="piso10" instance=ExtResource("1_li04a")]
+position = Vector2(581, -331)
+
+[node name="piso15" parent="piso10" instance=ExtResource("1_li04a")]
+position = Vector2(704, -331)
+
+[node name="piso11" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(488, 422)
+
+[node name="piso12" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(613, 422)
+
+[node name="piso13" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(738, 422)
+
+[node name="piso14" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(864, 422)
+
+[node name="piso15" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(989, 422)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_b7ymu")]
+position = Vector2(74, 538)
+
+[node name="piso16" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(547, 261)
+
+[node name="piso17" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(664, 261)
+
+[node name="piso18" parent="." instance=ExtResource("1_li04a")]
+position = Vector2(786, 261)
+
+[node name="Node2D" parent="." instance=ExtResource("3_b7ymu")]
+position = Vector2(622, 360)

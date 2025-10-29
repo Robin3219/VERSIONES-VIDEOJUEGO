@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://jn3wp57h40at"]
+
+[ext_resource type="Texture2D" uid="uid://b5lqt88b5gcyo" path="res://Mapa nivel 1/decoraciones/carro1.png" id="1_i3rjp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_521y3"]
+size = Vector2(1653.162, 557.59985)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ikj8"]
+size = Vector2(1119.8424, 297.59985)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(197, 114)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(23.750011, -6.6249967)
+scale = Vector2(0.15681003, 0.16464822)
+texture = ExtResource("1_i3rjp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-6.946289, 102)
+shape = SubResource("RectangleShape2D_521y3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-163.9961, -313.59985)
+shape = SubResource("RectangleShape2D_2ikj8")

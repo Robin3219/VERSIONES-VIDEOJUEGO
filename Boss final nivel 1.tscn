@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc5wn42fvaom7"]
+
+[ext_resource type="Texture2D" uid="uid://bjdetr3swcwaf" path="res://Personaje/enemigo boss finsl mivel 1.png" id="1_vs0od"]
+
+[sub_resource type="GDScript" id="GDScript_vs0od"]
+script/source = "extends CharacterBody2D
+
+@export var speed: float = 150.0
+@onready var detection_area: Area2D = $Area2D
+
+var player: Node2D = null
+var home_position: Vector2
+var returning_home: bool = false
+
+func _ready() -> void:
+	home_position = global_position
+	detection_area.connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
+	detection_area.connect(\"body_exited\", Callable(self, \"_on_body_exited\"))
+
+func _physics_process(delta: float) -> void:
+	velocity.y = 0  # sin gravedad
+
+	if player:
+		var direction = (player.global_position - global_position).normalized()
+		velocity.x = direction.x * speed
+		returning_home = false
+	elif returning_home:
+		var direction_home = (home_position - global_position)
+		if direction_home.length() > 5:
+			velocity.x = direction_home.normalized().x * speed
+		else:
+			velocity.x = 0
+			returning_home = false
+	else:
+		velocity.x = 0
+
+	move_and_slide()
+
+func _on_body_entered(body: Node) -> void:
+	if body.is_in_group(\"Player\"):
+		player = body
+		print(\"Jugador detectado!\")
+
+func _on_body_exited(body: Node) -> void:
+	if body == player:
+		player = null
+		returning_home = true
+		print(\"Jugador fuera del rango, regresando a casa.\")
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1rpb"]
+size = Vector2(335, 374)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdrrt"]
+size = Vector2(1102, 891)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = SubResource("GDScript_vs0od")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(9.000015, 5)
+scale = Vector2(0.25061163, 0.24505492)
+texture = ExtResource("1_vs0od")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-9.5, 20)
+shape = SubResource("RectangleShape2D_j1rpb")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(-17, -16.5)
+shape = SubResource("RectangleShape2D_kdrrt")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_exited"]

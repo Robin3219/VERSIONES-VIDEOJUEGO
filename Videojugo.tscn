@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://blol8gj7f3t8c"]
+
+[ext_resource type="Texture2D" uid="uid://dgclo1aijtmsg" path="res://LYRA.png" id="1_nvepo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjbxt"]
+resource_local_to_scene = true
+size = Vector2(683, 1582)
+
+[node name="Personaje" type="Node2D"]
+position = Vector2(3, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 22)
+texture = ExtResource("1_nvepo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+top_level = true
+z_as_relative = false
+position = Vector2(-72, 89)
+shape = SubResource("RectangleShape2D_rjbxt")
+one_way_collision = true

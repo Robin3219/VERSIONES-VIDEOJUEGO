@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://f1pfibjnevsi"]
+
+[ext_resource type="Texture2D" uid="uid://oqwvgy6v264e" path="res://tile_half_center.png" id="1_i803x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf48w"]
+size = Vector2(126, 34)
+
+[node name="piso" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-61, 17)
+scale = Vector2(1.575, 1.75)
+texture = ExtResource("1_i803x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-61, -1)
+shape = SubResource("RectangleShape2D_rf48w")

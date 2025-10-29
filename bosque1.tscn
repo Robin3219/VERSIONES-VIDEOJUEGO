@@ -1,0 +1,428 @@
+[gd_scene load_steps=28 format=3 uid="uid://d4nwher7cx3a4"]
+
+[ext_resource type="PackedScene" uid="uid://btqeiss13iaa2" path="res://primer fondo.tscn" id="1_yo7uw"]
+[ext_resource type="Texture2D" uid="uid://dvb87vj6sq75g" path="res://Mapa nivel 1/fondo/Edificio 3.png" id="2_7rdsb"]
+[ext_resource type="Texture2D" uid="uid://ux1lagevqfmy" path="res://Mapa nivel 1/fondo/Edificio 2.png" id="3_24vd1"]
+[ext_resource type="Texture2D" uid="uid://bf2vw380syrm6" path="res://Mapa nivel 1/fondo/Edificio 1.png" id="4_glqls"]
+[ext_resource type="Texture2D" uid="uid://ii78cgkvo88g" path="res://Mapa nivel 1/Naturaleza/Arbusto 2.png" id="9_p3wri"]
+[ext_resource type="Texture2D" uid="uid://ce3mx0bivrohp" path="res://NATURALEZA/FLORES/FLORES VERDE-AZUL/FLORES_0001s_0002_TALLO.png" id="11_24vd1"]
+[ext_resource type="Texture2D" uid="uid://qpnfni48kibr" path="res://NATURALEZA/BOSQUE_0000s_0007_PINO-GRANDE.png" id="12_n1w5i"]
+[ext_resource type="Texture2D" uid="uid://ch55oo3fgh3ik" path="res://NATURALEZA/BOSQUE_0000s_0003_ÁRBOL-FRONDOSO.png" id="13_cfrly"]
+[ext_resource type="Texture2D" uid="uid://b1yeydy2pb6vu" path="res://NATURALEZA/BOSQUE_0000s_0004_PINO-JOVEN.png" id="13_lcqqt"]
+[ext_resource type="PackedScene" uid="uid://bdov1ej3ty3o4" path="res://Personaje/Fisicaplayer. .tscn" id="13_yg86o"]
+[ext_resource type="Texture2D" uid="uid://itw6df6dnx3w" path="res://NATURALEZA/FONDO_0002s_0002_ARBUSTO-1.png" id="14_glqls"]
+[ext_resource type="PackedScene" uid="uid://clb3fw6yloxlx" path="res://muro de colision.tscn" id="14_gp3ck"]
+[ext_resource type="Texture2D" uid="uid://l168ooxgdnk5" path="res://Mapa nivel 1/Naturaleza/Roca 1.png" id="16_7disr"]
+[ext_resource type="Texture2D" uid="uid://d2ibmolc7b80a" path="res://Mapa nivel 1/Naturaleza/Arbusto 1.png" id="17_bdo4w"]
+[ext_resource type="Texture2D" uid="uid://bcajqmevihcpc" path="res://NATURALEZA/FLORES/FLORES VERDE-AZUL/FLOR_CON_PERSPECTIVA.webp" id="17_fnrx6"]
+[ext_resource type="PackedScene" uid="uid://wgxp6rlo8nh5" path="res://carro1 fis.tscn" id="18_odvhq"]
+[ext_resource type="Texture2D" uid="uid://b4boqnnaeuy7m" path="res://NATURALEZA/BOSQUE_0000s_0000_TRONCO-CORTADO.png" id="19_dbdtc"]
+[ext_resource type="Texture2D" uid="uid://essg2bcxotte" path="res://NATURALEZA/FLORES/FLORES VERDE-AZUL/FLORES_0000s_0000_FLOR.png" id="20_ngw3f"]
+[ext_resource type="Texture2D" uid="uid://bpmt2tel6dqa4" path="res://NATURALEZA/FLORES/OTRAS (DECORACIÓN)/FLORES-DECORATIVAS_0000s_0008_FLORES-2-MORADO.png" id="21_p3wri"]
+[ext_resource type="Texture2D" uid="uid://d0ttg523h0g1h" path="res://NATURALEZA/FLORES/OTRAS (DECORACIÓN)/FLORES-DECORATIVAS_0000s_0007_FLORES-2-AZUL.png" id="22_epiad"]
+[ext_resource type="Texture2D" uid="uid://cvcb038v6utj0" path="res://NATURALEZA/FLORES/OTRAS (DECORACIÓN)/FLORES-DECORATIVAS_0000s_0003_FLORES-MENTA.png" id="23_4y65o"]
+[ext_resource type="Texture2D" uid="uid://dsxrdpbewuqpy" path="res://NATURALEZA/CHARCOS/CHARCO_CON_PERSPECTIVA.webp" id="23_glqls"]
+[ext_resource type="PackedScene" uid="uid://c12sifqqvhq86" path="res://troncopequeñito.tscn" id="24_24vd1"]
+[ext_resource type="Texture2D" uid="uid://b26squpnwf4sy" path="res://NATURALEZA/FLORES/OTRAS (DECORACIÓN)/FLORES-DECORATIVAS_0000s_0004_FLORES-SALMON.png" id="24_pu03f"]
+[ext_resource type="Texture2D" uid="uid://7hc5cd8u8ma8" path="res://NATURALEZA/FLORES/OTRAS (DECORACIÓN)/FLORES-DECORATIVAS_0000s_0001_HONGO-2.png" id="25_yg86o"]
+[ext_resource type="PackedScene" uid="uid://mw1xwqbl36sy" path="res://troncograndesi.tscn" id="26_24vd1"]
+[ext_resource type="Texture2D" uid="uid://d5ylphqbhkvf" path="res://NATURALEZA/FLORES/OTRAS (DECORACIÓN)/FLORES-DECORATIVAS_0000s_0000_HONGO-1.png" id="26_gp3ck"]
+
+[node name="Node2D" instance=ExtResource("1_yo7uw")]
+
+[node name="Edificio3" parent="." index="1"]
+visible = false
+
+[node name="Edificio2" parent="Edificio3" index="0"]
+visible = false
+
+[node name="Edificio9" type="Sprite2D" parent="." index="2"]
+visible = false
+position = Vector2(-566, 175)
+scale = Vector2(0.30260423, 0.35718226)
+texture = ExtResource("2_7rdsb")
+
+[node name="Edificio2" type="Sprite2D" parent="Edificio9" index="0"]
+position = Vector2(16.523193, 33.421143)
+scale = Vector2(0.99139416, 0.9581166)
+texture = ExtResource("3_24vd1")
+
+[node name="Edificio1" type="Sprite2D" parent="Edificio9/Edificio2" index="0"]
+position = Vector2(-7.5, 227.19165)
+scale = Vector2(1.0323383, 1.0112946)
+texture = ExtResource("4_glqls")
+
+[node name="Edificio5" parent="." index="3"]
+visible = false
+
+[node name="Edificio2" parent="Edificio5" index="0"]
+visible = false
+
+[node name="Edificio1" parent="Edificio5/Edificio2" index="0"]
+visible = false
+
+[node name="Edificio6" parent="." index="4"]
+visible = false
+
+[node name="Edificio2" parent="Edificio6" index="0"]
+visible = false
+
+[node name="Edificio7" parent="." index="5"]
+visible = false
+
+[node name="Edificio2" parent="Edificio7" index="0"]
+visible = false
+
+[node name="Edificio1" parent="Edificio7/Edificio2" index="0"]
+visible = false
+
+[node name="Edificio8" parent="." index="6"]
+visible = false
+
+[node name="Edificio2" parent="Edificio8" index="0"]
+visible = false
+
+[node name="Edificio1" parent="Edificio8/Edificio2" index="0"]
+visible = false
+
+[node name="Edificio4" parent="." index="7"]
+visible = false
+
+[node name="Edificio2" parent="Edificio4" index="0"]
+visible = false
+
+[node name="Edificio1" parent="Edificio4/Edificio2" index="0"]
+visible = false
+
+[node name="Cerca" parent="." index="8"]
+visible = false
+position = Vector2(2898, 382)
+scale = Vector2(2.111198, 0.41971537)
+
+[node name="Calle" parent="." index="9"]
+visible = false
+position = Vector2(2289, 589)
+scale = Vector2(2.123344, 0.25376505)
+
+[node name="CollisionShape2D" parent="Calle/StaticBody2D" index="0"]
+position = Vector2(-31.838715, 413.76868)
+
+[node name="Pasto" parent="." index="10"]
+position = Vector2(2590, 693.00006)
+scale = Vector2(2.2917967, 1.6320424)
+
+[node name="Node2D3" parent="." index="11" instance=ExtResource("14_gp3ck")]
+position = Vector2(-60, -89)
+
+[node name="Roca1" type="Sprite2D" parent="." index="12"]
+position = Vector2(57.000004, 518)
+scale = Vector2(0.22319035, 0.21992491)
+texture = ExtResource("16_7disr")
+
+[node name="Arbusto4" type="Sprite2D" parent="." index="13"]
+position = Vector2(2168, 527)
+scale = Vector2(0.5013, 0.58743834)
+texture = ExtResource("17_bdo4w")
+
+[node name="Arbusto3" type="Sprite2D" parent="." index="14"]
+position = Vector2(2269, 564)
+scale = Vector2(0.8503326, 0.6519608)
+texture = ExtResource("9_p3wri")
+
+[node name="Pino grande" type="Sprite2D" parent="." index="15"]
+position = Vector2(1008, 224)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande2" type="Sprite2D" parent="." index="16"]
+position = Vector2(1340, 224)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande3" type="Sprite2D" parent="." index="17"]
+position = Vector2(1579.9999, 222)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande4" type="Sprite2D" parent="." index="18"]
+position = Vector2(1806.9999, 222)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande5" type="Sprite2D" parent="." index="19"]
+position = Vector2(2017, 224)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande6" type="Sprite2D" parent="." index="20"]
+position = Vector2(704, 226)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande7" type="Sprite2D" parent="." index="21"]
+position = Vector2(408.99994, 231)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande12" type="Sprite2D" parent="." index="22"]
+position = Vector2(-579.00006, 207)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande8" type="Sprite2D" parent="." index="23"]
+position = Vector2(26.99997, 233)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande9" type="Sprite2D" parent="." index="24"]
+position = Vector2(-343, 240)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino pequeño" type="Sprite2D" parent="." index="25"]
+position = Vector2(682.99994, 314)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño2" type="Sprite2D" parent="." index="26"]
+position = Vector2(896.99994, 311)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño7" type="Sprite2D" parent="." index="27"]
+position = Vector2(489, 334)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño8" type="Sprite2D" parent="." index="28"]
+light_mask = 0
+position = Vector2(234, 334)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño3" type="Sprite2D" parent="." index="29"]
+position = Vector2(2113, 320)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño4" type="Sprite2D" parent="." index="30"]
+position = Vector2(1900.9999, 325)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño5" type="Sprite2D" parent="." index="31"]
+position = Vector2(1668.9999, 323)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño6" type="Sprite2D" parent="." index="32"]
+position = Vector2(1150, 316)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño9" type="Sprite2D" parent="." index="33"]
+position = Vector2(1425.9999, 314)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Flores0001s0002Tallo" type="Sprite2D" parent="." index="34"]
+position = Vector2(496.00003, 585)
+scale = Vector2(0.102366865, 0.11857143)
+texture = ExtResource("11_24vd1")
+
+[node name="Flores0001s0002Tallo2" type="Sprite2D" parent="." index="35"]
+position = Vector2(288.00003, 585)
+scale = Vector2(0.102366865, 0.11857143)
+texture = ExtResource("11_24vd1")
+
+[node name="Arbusto2" type="Sprite2D" parent="." index="36"]
+position = Vector2(139, 562)
+scale = Vector2(0.65742797, 0.6691177)
+texture = ExtResource("9_p3wri")
+
+[node name="Arbusto1" type="Sprite2D" parent="." index="37"]
+position = Vector2(369, 592)
+scale = Vector2(0.48613518, 0.42118227)
+texture = ExtResource("17_bdo4w")
+
+[node name="Node2D5" parent="." index="38" instance=ExtResource("18_odvhq")]
+position = Vector2(707, 112)
+
+[node name="Fondo0002s0002Arbusto1" type="Sprite2D" parent="." index="39"]
+position = Vector2(2345, 734)
+texture = ExtResource("14_glqls")
+
+[node name="FlorConPerspectiva" type="Sprite2D" parent="." index="40"]
+position = Vector2(612, 686)
+scale = Vector2(0.20469798, 0.24509804)
+texture = ExtResource("17_fnrx6")
+
+[node name="FlorConPerspectiva3" type="Sprite2D" parent="." index="41"]
+position = Vector2(646, 700)
+scale = Vector2(0.09144299, 0.15604614)
+texture = ExtResource("17_fnrx6")
+
+[node name="FlorConPerspectiva4" type="Sprite2D" parent="." index="42"]
+position = Vector2(674, 699)
+scale = Vector2(0.09144299, 0.15604614)
+texture = ExtResource("17_fnrx6")
+
+[node name="FlorConPerspectiva5" type="Sprite2D" parent="." index="43"]
+position = Vector2(696, 690)
+scale = Vector2(0.09144299, 0.15604614)
+texture = ExtResource("17_fnrx6")
+
+[node name="FlorConPerspectiva2" type="Sprite2D" parent="." index="44"]
+position = Vector2(656.00006, 666)
+scale = Vector2(0.33053696, 0.46241894)
+texture = ExtResource("17_fnrx6")
+
+[node name="FloresDecorativas0000s0008Flores2Morado" type="Sprite2D" parent="." index="45"]
+position = Vector2(516, 555)
+scale = Vector2(0.15165165, 0.15165167)
+texture = ExtResource("21_p3wri")
+
+[node name="FloresDecorativas0000s0008Flores2Morado2" type="Sprite2D" parent="." index="46"]
+position = Vector2(1732, 498.99997)
+scale = Vector2(0.19796325, 0.19796327)
+texture = ExtResource("21_p3wri")
+
+[node name="FloresDecorativas0000s0008Flores2Morado3" type="Sprite2D" parent="." index="47"]
+position = Vector2(1707, 545)
+scale = Vector2(0.1080492, 0.1080492)
+texture = ExtResource("21_p3wri")
+
+[node name="FloresDecorativas0000s0007Flores2Azul" type="Sprite2D" parent="." index="48"]
+position = Vector2(1429, 552.00006)
+scale = Vector2(0.14939946, 0.14939944)
+texture = ExtResource("22_epiad")
+
+[node name="FloresDecorativas0000s0003FloresMenta" type="Sprite2D" parent="." index="49"]
+position = Vector2(1775, 572)
+scale = Vector2(0.076330364, 0.076330364)
+texture = ExtResource("23_4y65o")
+
+[node name="FloresDecorativas0000s0003FloresMenta2" type="Sprite2D" parent="." index="50"]
+position = Vector2(1657, 582)
+scale = Vector2(0.076330364, 0.076330364)
+texture = ExtResource("23_4y65o")
+
+[node name="FloresDecorativas0000s0003FloresMenta3" type="Sprite2D" parent="." index="51"]
+position = Vector2(763, 577)
+scale = Vector2(0.076330364, 0.076330364)
+texture = ExtResource("23_4y65o")
+
+[node name="FloresDecorativas0000s0004FloresSalmon" type="Sprite2D" parent="." index="52"]
+position = Vector2(632, 579.00006)
+scale = Vector2(0.077731065, 0.07773106)
+texture = ExtResource("24_pu03f")
+
+[node name="FloresDecorativas0000s0001Hongo2" type="Sprite2D" parent="." index="53"]
+position = Vector2(1248, 614)
+scale = Vector2(0.13094775, 0.13897666)
+texture = ExtResource("25_yg86o")
+
+[node name="FloresDecorativas0000s0000Hongo1" type="Sprite2D" parent="." index="54"]
+position = Vector2(478, 614)
+scale = Vector2(0.11708859, 0.11708861)
+texture = ExtResource("26_gp3ck")
+
+[node name="Node2D" parent="." index="55" instance=ExtResource("24_24vd1")]
+position = Vector2(749, 193)
+
+[node name="Node2D2" parent="." index="56" instance=ExtResource("24_24vd1")]
+position = Vector2(1101, 201)
+
+[node name="Flores0000s0000Flor" type="Sprite2D" parent="Node2D2" index="1"]
+position = Vector2(408, 386)
+scale = Vector2(0.095098116, 0.10807856)
+texture = ExtResource("20_ngw3f")
+
+[node name="Node2D4" parent="." index="57" instance=ExtResource("26_24vd1")]
+position = Vector2(936, 85)
+
+[node name="CharcoConPerspectiva" type="Sprite2D" parent="." index="58"]
+position = Vector2(1819, 647)
+scale = Vector2(0.27833003, 0.24660634)
+texture = ExtResource("23_glqls")
+
+[node name="CharacterBody2D" parent="." index="59" instance=ExtResource("13_yg86o")]
+position = Vector2(501, 616)
+
+[node name="FloresDecorativas0000s0001Hongo3" type="Sprite2D" parent="." index="60"]
+position = Vector2(1264, 629.00006)
+rotation = -0.26179937
+scale = Vector2(0.059431512, 0.06307549)
+texture = ExtResource("25_yg86o")
+
+[node name="Arbusto5" type="Sprite2D" parent="." index="61"]
+position = Vector2(141, 669)
+scale = Vector2(0.65742797, 0.6691177)
+texture = ExtResource("9_p3wri")
+
+[node name="Arbusto6" type="Sprite2D" parent="." index="62"]
+position = Vector2(381, 696)
+scale = Vector2(0.48613518, 0.42118227)
+texture = ExtResource("17_bdo4w")
+
+[node name="Pino pequeño11" type="Sprite2D" parent="." index="63"]
+light_mask = 0
+position = Vector2(78, 339)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño12" type="Sprite2D" parent="." index="64"]
+light_mask = 0
+position = Vector2(-94.999985, 393)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño15" type="Sprite2D" parent="." index="65"]
+light_mask = 0
+position = Vector2(-265, 342)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño10" type="Sprite2D" parent="." index="66"]
+light_mask = 0
+position = Vector2(4.000002, 447)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino grande10" type="Sprite2D" parent="." index="67"]
+position = Vector2(-392, 299)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino grande11" type="Sprite2D" parent="." index="68"]
+position = Vector2(-569, 367)
+scale = Vector2(0.52156866, 0.5274914)
+texture = ExtResource("12_n1w5i")
+
+[node name="Pino pequeño13" type="Sprite2D" parent="." index="69"]
+light_mask = 0
+position = Vector2(-152.99998, 481)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño14" type="Sprite2D" parent="." index="70"]
+light_mask = 0
+position = Vector2(-347, 471)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Pino pequeño16" type="Sprite2D" parent="." index="71"]
+light_mask = 0
+position = Vector2(-611, 462)
+scale = Vector2(0.48615918, 0.45785126)
+texture = ExtResource("13_lcqqt")
+
+[node name="Bosque0000s0003ÁrbolFrondoso" type="Sprite2D" parent="." index="72"]
+position = Vector2(2185, 386.00003)
+scale = Vector2(0.45034438, 0.46523818)
+texture = ExtResource("13_cfrly")
+
+[node name="Bosque0000s0000TroncoCortado" type="Sprite2D" parent="." index="73"]
+position = Vector2(2323, 805)
+scale = Vector2(0.2859281, 0.3117433)
+texture = ExtResource("19_dbdtc")
